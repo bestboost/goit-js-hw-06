@@ -1,15 +1,14 @@
-const mainEl = document.querySelector('ul');
+const mainEl = document.getElementById("categories");
 console.log('Number of categories:', mainEl.children.length);
 
-const itemList = mainEl.children;
-console.log(itemList);  
 
-
-const itemElAll = itemList.map(item => item());
+const itemElAll = mainEl.children 
 console.log(itemElAll);
 
-const categoryEl = mainEl.querySelector('.item');
-console.log('Category:', categoryEl.firstElementChild.textContent);
 
-const sumEl = categoryEl.querySelectorAll('li');
-console.log('Elements:', sumEl.length);
+    const categoryEl = mainEl.querySelector('.item');
+    console.log('Category:', categoryEl.firstElementChild.textContent);
+
+    const sumEl = categoryEl.querySelectorAll('li');
+    console.log('Elements:', sumEl.length);
+   
