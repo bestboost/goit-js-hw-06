@@ -17,14 +17,16 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+
+const containerForList = document.getElementById("ingredients");
+
 for (const ingredient of ingredients) {
 
-const list = document.createElement("li");
-list.textContent = `${ingredient}`;
-list.classList.add('item');
-console.log(list); 
-}
-const containerForList = document.getElementById("ingredients");
-// console.log(containerForList);
-containerForList.after(list);
+  const list = document.createElement("li");
+  list.textContent = `${ingredient}`;
+  list.classList.add('item');
+  console.log(list);
 
+  containerForList.insertAdjacentHTML("beforeend", list);
+  // elem.insertAdjacentHTML(position, string);
+};
