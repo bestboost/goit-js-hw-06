@@ -28,12 +28,49 @@ const images = [
   },
 ];
 
+const refs = {
+  list: document.querySelector('.gallery')
+};
 
-const listImg = document.createElement("li");
-console.log(listImg); 
+const listItemsImages = createListItemsImages(images);
 
-const image = document.createElement("img");
-listImg.image = 
- ` ${ image.url }, 
-${ image.alt }`;
-console.log(image);
+// refs.list.insertAdjacentHTML() = listItemsImages;
+
+console.log(listItemsImages);
+
+function createListItemsImages(items) {
+  return items.map(item => `<li>${item.url}, ${item.alt}</li>`).join('');
+}
+
+// const listImagesAttribute = createListImagesAttribute(images); 
+// const listImg = listImagesAttribute;
+
+// listImagesAttribute.innerHTML("beforeend", listImg);
+
+// function createListImagesAttribute(items) { 
+//   return items.map(item => `<li>${item.url}, ${ item.alt } </li>`).join('')
+// }
+   
+//   console.log (listImagesAttribute);
+
+  
+
+
+// const listImg = document.createElement("li");
+// console.log(listImg); 
+
+// const image = document.createElement("img");
+// listImg.image = 
+//  `${ image.url }, 
+// ${ image.alt }`;
+// console.log(image);
+
+// const list = document.querySelector(".list");
+
+// const newTechnologies = ["React", "TypeScript", "Node.js"];
+// const markup = newTechnologies
+//   .map((technology) => `<li class="list-item new">${technology}</li>`)
+//   .join("");
+
+// list.insertAdjacentHTML("beforeend", markup);
+// list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
