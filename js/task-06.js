@@ -43,10 +43,10 @@ function onInputBlur(event) {
     console.log(event.currentTarget.value);
     const symbolLength = event.currentTarget.value;
    
-    if (symbolLength === 0) {
-        console.log('true');
-    } else {
-        textInput.classList.add('.valid');
-        console.log('false');
-    }
+    // if (symbolLength === 0) {
+    //     console.log('true');
+    // } else {
+    //     textInput.classList.add('.valid');
+    //     console.log('false');
+    // }
 }
