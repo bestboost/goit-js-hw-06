@@ -31,7 +31,10 @@
 // }
 
 const textInput = document.querySelector("#validation-input");
-
+const trueLength = document.querySelector('[data-length="6"]');
+    
+const trueLengthNumber = trueLength.dataset.length;    
+console.log(trueLengthNumber);
 
 const validBorderColor = document.querySelector(".valid");
 const invalidBorderColor = document.querySelector(".invalid");
@@ -40,13 +43,15 @@ textInput.addEventListener("blur", onInputBlur);
 
 function onInputBlur(event) {
     console.log('событие blur');
-    console.log(event.currentTarget.value);
-    const symbolLength = event.currentTarget.value;
    
-    // if (symbolLength === 0) {
-    //     console.log('true');
-    // } else {
-    //     textInput.classList.add('.valid');
-    //     console.log('false');
-    // }
+    const symbolLength = event.currentTarget.value;
+    console.log(event.currentTarget.value);
+    console.log(symbolLength.length);
+
+    if (symbolLength.length === trueLengthNumber (НАДО ПРИВЕСТИ К ЧИСЛУ)) {
+        console.log('true');
+    } else {
+       
+        console.log('false');
+    }
 }
