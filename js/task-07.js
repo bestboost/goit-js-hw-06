@@ -1,32 +1,14 @@
-// Задание 7
-// Напиши скрипт, который реагирует на изменение
-// значения input#font - size - control(событие input)
-// и изменяет инлайн - стиль span#text обновляя
-// свойство font - size.В результате при перетаскивании
-// ползунка будет меняться размер текста.
+const fontSizeControl = document.querySelector("#font-size-control");
+const fontSizeText = document.querySelector("#text");
 
-// < input id = "font-size-control" type = "range"
-// min = "16" max = "96" />
-// <br />
-// <span id="text">Abracadabra!</span>
-
-const fontSizeControl = document.querySelector("input#font-size-control");
-console.log(fontSizeControl);
-const fontSize = document.querySelector("span#text");
-console.dir(fontSize);
-
-fontSizeControl.addEventListener("change", setOutput);
-
-fontSize.addEventListener("input", (event) => {
-    fontSize.textContent = event.currentTarget.value;
-    fontSize.textContent = event.style.fontSize;
+fontSizeControl.addEventListener("input", event => {
+     fontSizeText.style.fontSize = event.currentTarget.value + 'px';
+  
 });
 
-function setOutput() {
-    const rangeMin = fontSizeControl.min;
-    console.log(rangeMin);
-  
-    const rangeMax = fontSizeControl.max;
-    console.log(rangeMax);
 
-};
+
+
+
+
+
